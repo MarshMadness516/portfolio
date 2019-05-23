@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-	res.send('home page');
+	res.render('landing');
 });
 
 app.listen(3000, () => {
