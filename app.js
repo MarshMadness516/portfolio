@@ -11,7 +11,10 @@ mongoose.connect("mongodb+srv://mpritch:marzy596@cluster0-jnl8r.mongodb.net/test
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 
+app.get('/', (req, res) => {
+	res.send('home page');
+});
 
-app.listen(process.env.PORT, process.env.IP, () => {
+app.listen(3000, () => {
     console.log("Portfolio server has started");
 });
